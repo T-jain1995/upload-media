@@ -1,0 +1,39 @@
+<div *ngIf="!showProgressBar && !showResults">
+  <file-drop contentClassName="upload-content" dropZoneLabel="Drop files here to validate"
+    [dropZoneClassName]="'upload-background-image'" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
+    (onFileLeave)="fileLeave($event)">
+  </file-drop>
+</div>
+<div *ngIf="showProgressBar && !showResults">
+  <span class="progress-bar-text">Processing Media</span>
+  <mat-progress-bar [color]="color" mode="indeterminate"></mat-progress-bar>
+</div>
+<div *ngIf="showResults">
+  <span class="analysis-report-text">Analysis Report</span>
+  <mat-grid-list [gutterSize]="'10px'" cols="5" rowHeight="100px">
+    <mat-grid-tile [colspan]="3" [rowspan]="2">
+      <video width="400" controls>
+        <source src="" type="video/mp4">
+      </video>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="2">
+      <table style="width: 100%" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="attribute">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.attribute}} </td>
+        </ng-container>
+        <ng-container matColumnDef="score">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.score}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" style="display: none"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="4" [rowspan]="1">
+        <h4>
+        From our analysis, this video has a {{quality}} percentage of being a fake video.
+      </h4>
+      </mat-grid-tile>
+  </mat-grid-list>
+</div>

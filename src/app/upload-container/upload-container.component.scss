@@ -1,0 +1,52 @@
+.upload-button {
+  float: right;
+}
+
+.tile-image {
+  width: 100%;
+  height: auto;
+  // background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.tile-area {
+  margin-top: 15rem;
+}
+
+.mat-card-progress {
+  height: 200px;
+}
+
+.progress-bar-text {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  font-weight: bold;
+}
+
+.analysis-report-text {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}

@@ -1,0 +1,9 @@
+  @mixin splash-screen-theme($theme) {
+    $primary: map-get($theme, primary);
+    $foreground: map-get($theme, foreground);
+
+    #splash-screen {
+      background-color: mat-color($primary);
+      color: mat-color($foreground, text);
+    }
+  }

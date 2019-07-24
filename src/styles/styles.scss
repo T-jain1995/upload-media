@@ -1,0 +1,58 @@
+@import 'material-design-icons/iconfont/material-icons.css';
+@import 'typeface-roboto/index.css';
+@import 'variables.scss';
+
+/*----- Containers -----*/
+
+// stylelint-disable-next-line
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $root-font-size;
+  height: 100%;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $primary-font-size;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.content-container {
+  border: 1px solid;
+  border-left: 0;
+  height: 100%;
+  padding: 1.5rem 4rem;
+  position: relative;
+}
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+}
+
+mat-sidenav {
+    width: 250px;
+}
+
+#app-container {
+  display: block;
+  height: 100%;
+}
+
+.upload-background-image {
+  background-image: url(../assets/519838-50_Cloud_Arrow_Up-512.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20rem;
+  height: 30rem;
+  padding-top: 25rem;
+}
+
+.upload-content {
+  color: black;
+  font-weight: bold;
+}

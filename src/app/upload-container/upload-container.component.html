@@ -1,0 +1,33 @@
+<div class="content-container">
+  <h2>Recent Files</h2>
+  <button color="accent" class="upload-button" (click)="openDialog()" mat-raised-button>
+    <mat-icon>cloud_upload</mat-icon> Upload
+  </button>
+  <div class="tile-area">
+    <mat-grid-list [gutterSize]="'10px'" cols="3" rowHeight="2:1">
+      <mat-grid-tile>
+        <iframe width="400" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        </iframe>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img class="tile-image" src="../../assets/deepfake-image.png" />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <video width="400" controls>
+          <source src="../../assets/SampleVideo_1280x720_2mb.mp4" type="video/mp4">
+        </video>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img class="tile-image" src="../../assets/deepfakes2.jfif" />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <audio controls>
+          <source src="../../assets/ringtone.mp3" type="audio/mpeg">
+        </audio>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img class="tile-image" src="../../assets/deepfake-image3.webp" />
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

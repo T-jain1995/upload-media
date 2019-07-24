@@ -1,0 +1,27 @@
+<mat-drawer-container autosize dotted fullscreen>
+  <mat-drawer class="help-nav" disableClose mode="side" opened position="start" role="navigation">
+    <mat-nav-list class="help-nav-category">
+      <h4 class="help-nav-category-header">
+        <span class="application-name">Truth Guard</span>
+      </h4>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+    <mat-nav-list class="help-nav-category">
+      <h4 class="help-nav-category-header">
+        <a>
+          <mat-icon class="user-icon">face</mat-icon>
+          <span class="user-text">{{username}}</span>
+        </a>
+      </h4>
+      <mat-divider></mat-divider>
+      <a class="help-nav-category-item" mat-list-item [routerLink]="routerPath" routerLinkActive="active">
+        <mat-icon class="user-icon">local_movies</mat-icon>
+        <span class="help-nav-category-item-label">Media content</span>
+        <mat-divider></mat-divider>
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content role="region">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

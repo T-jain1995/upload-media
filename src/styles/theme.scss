@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+@import 'theme-overrides.scss';
+@import './../app/app.component.theme.scss';
+@import './../app/upload/upload.component.theme.scss';
+
+@include mat-core();
+
+#light-theme {
+  $app-primary: mat-palette($mat-grey, 300);
+  $app-accent: mat-palette($mat-light-blue, 500);
+  $app-warn: mat-palette($mat-red, 500);
+
+  $app-light-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+  @include angular-material-theme($app-light-theme);
+  @include upload-screen-theme($app-light-theme);
+  @include splash-screen-theme($app-light-theme);
+}
+
+#dark-theme {
+  $app-primary: mat-palette($mat-grey, 900);
+  $app-accent: mat-palette($mat-light-blue, 800);
+  /*stylelint-disable-next-line*/
+  $app-warn: mat-palette($mat-orange, A700);
+
+  $app-dark-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+  @include angular-material-theme($app-dark-theme);
+  @include upload-screen-theme($app-dark-theme);
+  @include splash-screen-theme($app-dark-theme);
+}

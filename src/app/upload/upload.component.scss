@@ -1,0 +1,39 @@
+.help-nav {
+  border: 0.0625rem solid;
+  padding: 0rem 0;
+  width: 22rem;
+
+  &-category-description {
+    font-style: italic;
+    margin: 0 2rem 2rem;
+  }
+
+  &-category-header {
+    margin: 1rem;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  &-category-item-label {
+    margin-left: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.user-icon {
+  align-items: center;
+  // display: flex;
+  // float: left;
+  text-decoration: none;
+}
+
+.user-text {
+  margin-left: 2rem;
+}
+
+.application-name {
+  margin-left: 4rem;
+  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}

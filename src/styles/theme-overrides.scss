@@ -1,0 +1,86 @@
+/*----- Button -----*/
+
+@mixin button-theme($theme) {
+  $foreground: map-get($theme, foreground);
+
+  .form-action-button:focus,
+  .form-button:focus {
+    border: 0.1rem dashed mat-color($foreground, text);
+  }
+}
+
+/*----- Card -----*/
+
+@mixin card-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  .content-container .card {
+    background: mat-color($primary);
+  }
+}
+
+/*----- Link -----*/
+
+@mixin link-theme($theme) {
+  $accent: map-get($theme, accent);
+
+  .link {
+    color: mat-color($accent, 300);
+  }
+}
+
+/*----- Stepper -----*/
+
+@mixin stepper-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  .form-stepper {
+    background-color: transparent;
+
+    & .mat-step-icon {
+      background-color: mat-color($primary);
+    }
+
+    & .mat-step-icon-not-touched {
+      background-color: mat-color($primary, 700);
+    }
+
+    & .mat-step-text-label {
+      color: mat-color($primary, 200);
+    }
+  }
+}
+
+/*----- Scrollbar -----*/
+
+@mixin scrollbar-theme($theme) {
+  $accent: map-get($theme, accent);
+  $primary: map-get($theme, primary);
+
+  ::-webkit-scrollbar-thumb {
+    background: mat-color($accent);
+  }
+
+  body {
+    scrollbar-face-color: mat-color($primary);
+    scrollbar-track-color: mat-color($accent);
+  }
+}
+
+/*----- Snackbar -----*/
+
+@mixin snackbar-theme($theme) {
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $foreground: map-get($theme, foreground);
+
+  .error-notification {
+    background: mat-color($warn);
+    color: mat-color($foreground, text);
+  }
+
+  .notification {
+    background: mat-color($accent);
+    color: mat-color($foreground, text);
+  }
+}

@@ -1,0 +1,29 @@
+/*----- Resolutions -----*/
+
+// Using px cause its easier to follow.
+
+@mixin phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet-portrait {
+  @media (min-width: 600px) and (max-width: 899px) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (min-width: 900px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1200px) and (max-width: 1799px) {
+    @content;
+  }
+}
+@mixin large-desktop {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

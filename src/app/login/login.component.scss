@@ -1,0 +1,51 @@
+@import '../styles/mixin.scss';
+
+#splash-screen {
+  align-items: center;
+  display: flex;
+  height: 40%;
+  justify-content: center;
+  @include phone {
+    font-size: 3rem;
+  }
+  @include tablet-portrait {
+    font-size: 4rem;
+  }
+  @include tablet-landscape {
+    font-size: 6rem;
+  }
+  @include desktop {
+    font-size: 8rem;
+  }
+  @include large-desktop {
+    font-size: 12rem;
+  }
+
+  &-image {
+    @include phone {
+      height: 7.5rem;
+      margin-right: 1rem;
+      width: 7.5rem;
+    }
+    @include tablet-portrait {
+      height: 10rem;
+      margin-right: 1rem;
+      width: 10rem;
+    }
+    @include tablet-landscape {
+      height: 15rem;
+      margin-right: 2rem;
+      width: 15rem;
+    }
+    @include desktop {
+      height: 20rem;
+      margin-right: 2rem;
+      width: 20rem;
+    }
+    @include large-desktop {
+      height: 30rem;
+      margin-right: 3rem;
+      width: 30rem;
+    }
+  }
+}

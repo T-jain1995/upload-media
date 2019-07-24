@@ -1,0 +1,9 @@
+@mixin upload-screen-theme($theme) {
+  $primary: map-get($theme, primary);
+  $foreground: map-get($theme, foreground);
+
+  #upload-screen {
+    background-color: mat-color($primary);
+    color: mat-color($foreground, text);
+  }
+}
