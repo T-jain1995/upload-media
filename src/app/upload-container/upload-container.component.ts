@@ -80,12 +80,14 @@ export class DialogUploadContainerComponent {
           const formData = new FormData();
           formData.append('logo', file, droppedFile.relativePath);
 
-          this.http.post('http://localhost:1518/api/upload', formData, { responseType: 'blob' })
+          this.http.post('https://blobuploader.azurewebsites.net/api/upload', formData, { responseType: 'blob' })
           .subscribe(data => {
             console.log('Received response: ' + data);
             this.showProgressBar = false;
             this.showResults = true;
           });
+          this.showProgressBar = false;
+          this.showResults = true;
         });
       } else {
         // It was a directory (empty directories are added, otherwise only files)
